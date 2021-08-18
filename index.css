@@ -1,0 +1,17 @@
+.center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {    
+    height: 100vh;
+}
+
+.name {
+    font-size: 10vw;
+}
+
+.genre {
+    text-align: center;
+}
