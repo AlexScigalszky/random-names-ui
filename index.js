@@ -21,7 +21,7 @@ var app = new Vue({
             }
         },
         fetchRandomName: async function () {
-            var data = await fetch('http://localhost:3000/random')
+            var data = await fetch('https://random-names-api.herokuapp.com/random')
                 .then(data => data.json());
             this.nameData = {
                 ...data,
