@@ -2,7 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         ready: false,
-        nameData: null
+        nameData: null,
+        classObject: ''
     },
     created: function () {
         this.fetchRandomName()
@@ -30,6 +31,21 @@ var app = new Vue({
                     genre: this.toGenre(data.body.genre),
                 }
             };
+            switch (data.body.genre) {
+                case 'M':
+                    this.classObject = {'male': true};
+                    break;
+                case 'A':
+                    this.classObject = {'ambi': true};
+                    break;
+                case 'F':
+                    this.classObject = {'femme': true};
+                    break;
+                default:
+                    this.classObject = {'': true};
+                    break;
+            }
+            console.log('al', this.classObject);
             this.ready = true;
             console.log(this.nameData);
         }
