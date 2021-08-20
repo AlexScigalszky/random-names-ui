@@ -4,6 +4,7 @@
   "description": "web of random names",
   "main": "index.html",
   "scripts": {
+    "open": "npx concurrently \"npx http-server -a localhost -p 1234\" \"open http://localhost:1234/\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
