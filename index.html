@@ -4,27 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Nombres</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div id="app" class="center-center" v-bind:class="classObject" @click="fetchRandomName">
-      <div v-if="ready">
-        <div id="nameData.body.name" class="name">{{ nameData.body.name }}</div>
-        <div id="nameData.body.genre" class="genre">{{ nameData.body.genre }}</div>
+    <div id="app" v-bind:class="classObject">
+      <div class="main-container center-center" @click="fetchRandomName">
+        <div v-if="ready">
+          <div id="nameData.body.name" class="name">{{ nameData.body.name }}</div>
+          <div id="nameData.body.genre" class="genre">{{ nameData.body.genre }}</div>
+        </div>
       </div>
+
+      <footer>
+        Desarrollado por
+        <a href="https://github.com/AlexScigalszky" target="_blank" rel="noopener"> Alex P. Scigalszky</a>. Tu granito de arena <a href="https://github.com/AlexScigalszky/random-names-ui/issues/new" target="_blank" rel="noopener"> aquí</a>. Discutamos
+        <a href="https://github.com/AlexScigalszky/random-names-ui/discussions/new" target="_blank"> Aquí</a>
+      </footer>
     </div>
-    <footer>
-      Desarrollado por
-      <a href="https://github.com/AlexScigalszky/AlexScigalszky" target="_blank" rel="noopener"> Alex P. Scigalszky. </a>
-
-      Tu granito de arena
-      <a href="https://github.com/AlexScigalszky/qa/issues/new" target="_blank" rel="noopener"> acá. </a>
-
-      Discutamos
-      <a href="https://github.com/AlexScigalszky/qa/discussions/new" target="_blank"> Aquí </a>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="./index.js"></script>
   </body>
