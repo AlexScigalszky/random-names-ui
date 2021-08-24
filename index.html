@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="app" v-bind:class="classObject">
-      <div class="main-container center-center" @click="fetchRandomName">
+      <div class="main-container center-center" @click="fetchRandomName(event)">
         <div v-if="ready">
           <div id="nameData.body.name" class="name">{{ nameData.body.name }}</div>
           <div id="nameData.body.genre" class="genre">{{ nameData.body.genre }}</div>
